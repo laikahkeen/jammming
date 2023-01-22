@@ -1,8 +1,14 @@
 let accessToken;
 let userId;
 let headers;
+let redirectUrl;
 const clientId = 'b8acf62c4bce43279a942a24b0ad8851';
-const redirectUrl = 'http://localhost:3000/';
+
+if (window.location == 'http://localhost:3000/') {
+	redirectUrl = 'http://localhost:3000/';
+} else {
+	redirectUrl = 'https://laikahkeen.github.io/jammming/';
+}
 
 const Spotify = {
 	getAccessToken() {
